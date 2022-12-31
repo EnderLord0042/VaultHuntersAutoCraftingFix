@@ -52,3 +52,9 @@ This mod makes autocrafting in Vault Hunters use the knowledge of the largest kn
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.vaulthuntersautocraftingfix]]
+    modId="the_vault"
+    mandatory=true
+    versionRange="[2.0.14.952)"
+    ordering="NONE"
+    side="BOTH"
