@@ -8,6 +8,10 @@
   ],
   "client": [
   ],
+  "server": [
+    "PlayerResearchesDataAccessor",
+    "PlayerResearchesDataMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
