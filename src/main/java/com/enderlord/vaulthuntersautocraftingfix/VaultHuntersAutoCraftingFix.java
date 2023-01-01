@@ -97,9 +97,4 @@ public class VaultHuntersAutoCraftingFix {
             reassessAutoCrafterResearchTeam(PlayerResearchesData.get(Objects.requireNonNull(event.getWorld().getServer()).overworld()));
         }
     }
-
-    @SubscribeEvent
-    public static void onChat(ServerChatEvent event) {
-        autoCrafterResearchTree = PlayerResearchesData.get(Objects.requireNonNull(event.getPlayer().getServer()).overworld()).getResearches(event.getPlayer().getUUID());
-    }
 }
