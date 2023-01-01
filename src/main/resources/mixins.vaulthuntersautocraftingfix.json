@@ -6,18 +6,15 @@
   "package": "com.enderlord.vaulthuntersautocraftingfix.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlueprintEntityMixin",
     "GridNetworkNodeMixin",
     "MachineCrafterTileMixin",
-    "TileEntityFormulaicAssemblicatorMixin",
     "RecipeGridHandlerMixin",
-    "BlueprintEntityMixin",
-    "TileCraftCrateMixin"
-  ],
-  "client": [
+    "TileCraftCrateMixin",
+    "TileEntityFormulaicAssemblicatorMixin"
   ],
   "server": [
     "PatternEncodingTermMenuMixin",
-    "PlayerResearchesDataAccessor",
     "PlayerResearchesDataMixin"
   ],
   "injectors": {

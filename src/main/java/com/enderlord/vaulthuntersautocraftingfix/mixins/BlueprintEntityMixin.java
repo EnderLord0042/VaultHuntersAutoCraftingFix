@@ -4,7 +4,6 @@ import com.enderlord.vaulthuntersautocraftingfix.VaultHuntersAutoCraftingFix;
 import com.simibubi.create.content.curiosities.tools.BlueprintEntity;
 import iskallia.vault.research.Restrictions;
 import net.minecraft.world.item.crafting.CraftingRecipe;
-import org.checkerframework.common.reflection.qual.Invoke;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
