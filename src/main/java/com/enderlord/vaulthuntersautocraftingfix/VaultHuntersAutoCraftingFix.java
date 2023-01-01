@@ -1,10 +1,7 @@
 package com.enderlord.vaulthuntersautocraftingfix;
 
-import com.mojang.logging.LogUtils;
 import iskallia.vault.research.ResearchTree;
-import iskallia.vault.util.PlayerReference;
 import net.minecraftforge.fml.common.Mod;
-import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
