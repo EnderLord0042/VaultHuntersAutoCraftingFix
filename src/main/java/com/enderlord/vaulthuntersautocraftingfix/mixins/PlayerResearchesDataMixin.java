@@ -16,28 +16,28 @@ import java.util.UUID;
 @Mixin(PlayerResearchesData.class)
 public abstract class PlayerResearchesDataMixin {
     @Inject(method = "research", at = @At("HEAD"), remap = false)
-    public void autoCrafterResearch(ServerPlayer player, Research research, CallbackInfoReturnable<PlayerResearchesData> cir) {
+    private void autoCrafterResearch(ServerPlayer player, Research research, CallbackInfoReturnable<PlayerResearchesData> cir) {
         if (VaultHuntersAutoCraftingFix.autoCrafterResearchTeam.stream().anyMatch(playerReference -> playerReference.getId().equals(player.getUUID()))) {
             VaultHuntersAutoCraftingFix.autoCrafterResearchTree.research(research);
         }
     }
 
     @Inject(method = "removeResearch", at = @At("HEAD"), remap = false)
-    public void autoCrafterRemoveResearch(ServerPlayer player, Research research, CallbackInfoReturnable<PlayerResearchesData> cir) {
+    private void autoCrafterRemoveResearch(ServerPlayer player, Research research, CallbackInfoReturnable<PlayerResearchesData> cir) {
         if (VaultHuntersAutoCraftingFix.autoCrafterResearchTeam.stream().anyMatch(playerReference -> playerReference.getId().equals(player.getUUID()))) {
             VaultHuntersAutoCraftingFix.autoCrafterResearchTree.removeResearch(research);
         }
     }
 
     @Inject(method = "leaveCurrentTeam", at = @At("HEAD"), remap = false)
-    public void autoCrafterLeaveCurrentTeam(Player player, CallbackInfoReturnable<Boolean> cir) {
+    private void autoCrafterLeaveCurrentTeam(Player player, CallbackInfoReturnable<Boolean> cir) {
         if (VaultHuntersAutoCraftingFix.autoCrafterResearchTeam.stream().anyMatch(playerReference -> playerReference.getId().equals(player.getUUID()))) {
             VaultHuntersAutoCraftingFix.reassessAutoCrafterResearchTeam(PlayerResearchesData.get(Objects.requireNonNull(player.getServer()).overworld()));
         }
     }
 
     @Inject(method = "acceptInvite", at = @At("HEAD"), remap = false)
-    public void autoCrafterAcceptInvite(Player invitee, UUID issuer, CallbackInfoReturnable<Boolean> cir) {
+    private void autoCrafterAcceptInvite(Player invitee, UUID issuer, CallbackInfoReturnable<Boolean> cir) {
         VaultHuntersAutoCraftingFix.reassessAutoCrafterResearchTeam(PlayerResearchesData.get(Objects.requireNonNull(invitee.getServer()).overworld()));
     }
 }

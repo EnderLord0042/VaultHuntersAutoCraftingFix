@@ -7,6 +7,7 @@ import iskallia.vault.world.data.PlayerResearchesData;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -95,5 +96,10 @@ public class VaultHuntersAutoCraftingFix {
         if (!event.getWorld().isClientSide()) {
             reassessAutoCrafterResearchTeam(PlayerResearchesData.get(Objects.requireNonNull(event.getWorld().getServer()).overworld()));
         }
+    }
+
+    @SubscribeEvent
+    public static void onChat(ServerChatEvent event) {
+        autoCrafterResearchTree = PlayerResearchesData.get(Objects.requireNonNull(event.getPlayer().getServer()).overworld()).getResearches(event.getPlayer().getUUID());
     }
 }

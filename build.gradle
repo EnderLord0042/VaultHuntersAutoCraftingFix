@@ -181,8 +181,23 @@ dependencies {
     // Download Vault Hunters JAR
     implementation fg.deobf("curse.maven:the_vault-458203:4196678")
 
-    // Download Other Vault Hunters Dependencies
+    // Download Vault Hunters Dependencies
     runtimeOnly fg.deobf("curse.maven:curios-309927:3841948")
+
+    // Download Mods in the Vault Hunters modpack that include autocrafting
+    implementation fg.deobf("curse.maven:ae2-223794:3859642")
+    implementation fg.deobf("curse.maven:botania-225643:3847141")
+    implementation fg.deobf("curse.maven:create-328085:4007544")
+    implementation fg.deobf("curse.maven:mekanism-268560:3875976")
+    implementation fg.deobf("curse.maven:refinedstorage-243076:3712882")
+    implementation fg.deobf("curse.maven:thermal_expansion-69163:3837868")
+
+    // Download Dependencies for autocrafting mods
+    runtimeOnly fg.deobf("curse.maven:cofh_core-69162:3838025")
+    runtimeOnly fg.deobf("curse.maven:flywheel-486392:3934664")
+    runtimeOnly fg.deobf("curse.maven:patchouli-306770:3846086")
+    implementation fg.deobf("curse.maven:thermal_foundation-222880:3837827")
+
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
