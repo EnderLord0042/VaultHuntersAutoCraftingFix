@@ -12,9 +12,6 @@ import java.util.UUID;
 
 @Mod("vaulthuntersautocraftingfix")
 public class VaultHuntersAutoCraftingFix {
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
-
     public static ResearchTree autoCrafterResearchTree = ResearchTree.empty();
 
     public static List<UUID> autoCrafterResearchTeam = new ArrayList<>();

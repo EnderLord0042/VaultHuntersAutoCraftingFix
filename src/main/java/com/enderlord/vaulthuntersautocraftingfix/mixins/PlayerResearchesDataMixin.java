@@ -65,7 +65,6 @@ public abstract class PlayerResearchesDataMixin {
 
     @Inject(method = "load", at = @At("TAIL"), remap = false)
     private void autoCrafterload(CallbackInfo ci){
-        System.out.println("ALLL OF HISTORY DELETED WITH ONE STROOOOOOOOOOOOKKKKKKKKKKEEEEEEEEEEEEEEE");
         reassessAutoCrafterResearchTeam();
     }
 
