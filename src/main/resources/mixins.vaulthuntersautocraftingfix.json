@@ -2,6 +2,7 @@
 {
   "required": true,
   "minVersion": "0.8",
+  "refmap": "mixins.vaulthuntersautocraftingfix.refmap.json",
   "package": "com.enderlord.vaulthuntersautocraftingfix.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [

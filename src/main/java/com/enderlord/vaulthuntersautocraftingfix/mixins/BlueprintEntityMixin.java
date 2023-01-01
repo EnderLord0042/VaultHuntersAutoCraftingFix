@@ -13,10 +13,10 @@ import java.util.Optional;
 
 @Mixin(BlueprintEntity.class)
 public class BlueprintEntityMixin {
-    @ModifyVariable(method = "interactAt", at = @At(value = "STORE", ordinal = 1), remap = false)
+    @ModifyVariable(method = "interactAt", at = @At(value = "STORE", ordinal = 1), remap = true)
     private Optional<CraftingRecipe> preventInteractAt(Optional<CraftingRecipe> recipe) {
         if (recipe.isPresent()) {
-            String restrictedBy = VaultHuntersAutoCraftingFix.autoCrafterResearchTree.restrictedBy(((CraftingRecipe)recipe.get()).getResultItem().getItem(), Restrictions.Type.CRAFTABILITY);
+            String restrictedBy = VaultHuntersAutoCraftingFix.autoCrafterResearchTree.restrictedBy(((CraftingRecipe) recipe.get()).getResultItem().getItem(), Restrictions.Type.CRAFTABILITY);
             if (restrictedBy != null) {
                 return Optional.empty();
             }
