@@ -73,7 +73,7 @@ This mod makes autocrafting in Vault Hunters use the knowledge of the largest kn
 [[dependencies.vaulthuntersautocraftingfix]]
     modId="create"
     mandatory=true
-    versionRange="[1.18.2-0.5.0.e,)"
+    versionRange="[0.5.0.e,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.vaulthuntersautocraftingfix]]
@@ -91,6 +91,6 @@ This mod makes autocrafting in Vault Hunters use the knowledge of the largest kn
 [[dependencies.vaulthuntersautocraftingfix]]
     modId="thermal_expansion"
     mandatory=true
-    versionRange="[1.18.2-1.6.3.13,)"
+    versionRange="[1.6.3.13,)"
     ordering="NONE"
     side="BOTH"
