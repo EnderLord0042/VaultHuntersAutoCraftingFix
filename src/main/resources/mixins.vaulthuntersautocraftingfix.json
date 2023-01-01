@@ -11,11 +11,9 @@
     "MachineCrafterTileMixin",
     "RecipeGridHandlerMixin",
     "TileCraftCrateMixin",
-    "TileEntityFormulaicAssemblicatorMixin"
-  ],
-  "server": [
-    "PatternEncodingTermMenuMixin",
-    "PlayerResearchesDataMixin"
+    "TileEntityFormulaicAssemblicatorMixin",
+    "PlayerResearchesDataMixin",
+    "PatternEncodingTermMenuMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -63,7 +63,7 @@ public abstract class PlayerResearchesDataMixin {
         reassessAutoCrafterResearchTeam();
     }
 
-    @Inject(method = "load", at = @At("HEAD"), remap = false)
+    @Inject(method = "load", at = @At("TAIL"), remap = false)
     private void autoCrafterload(CallbackInfo ci){
         System.out.println("ALLL OF HISTORY DELETED WITH ONE STROOOOOOOOOOOOKKKKKKKKKKEEEEEEEEEEEEEEE");
         reassessAutoCrafterResearchTeam();
